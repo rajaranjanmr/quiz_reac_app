@@ -5,7 +5,7 @@ function CategoryPageDetails(){
         <>
         <div className="category-ques">
                 <div className="category-content ">Calculation in maths</div>
-                <Link className="button-category" to="#">play now</Link>
+                <Link className="button-category" to="/rules">play now</Link>
             </div>
         </>
     )
