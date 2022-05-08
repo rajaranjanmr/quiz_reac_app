@@ -4,6 +4,8 @@ import Home from './Pages/Home';
 import {Routes,Route}  from "react-router-dom";
 import CategoryPageDetails from './component/CategoryPageDetail';
 import {Rules} from "../src/Pages/Rules"
+import CategoryPage from "./Pages/CategoryPage"
+import { Question } from './Pages/Question';
 function App() {
   return (
     <div className="App">
@@ -13,8 +15,9 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/category" element={<CategoryPageDetails/>}></Route>
+        <Route path="/category" element={<CategoryPage/>}></Route>
         <Route path="/rules" element={<Rules/>} />
+        <Route path="/question" element={<Question/>}></Route>
       </Routes>
       
     </div>

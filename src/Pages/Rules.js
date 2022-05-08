@@ -23,14 +23,14 @@ function Rules(){
                     <li>once submitted answer it can't be re-attempt</li>
                     <li>Final result you will get at the end of the quiz</li>
                     <li>There will be total 5 questions</li>
-                    
+                    {/* https://opentdb.com/api.php?amount=10&category=11 */}
                 </ul>
                 
             </div>
         </div>
         <div className="controller">
             <div className="back-rule"><Link to="/category">Back</Link></div>
-            <div className="front-rule"><Link to="question1.html">Continue</Link></div>
+            <div className="front-rule"><Link to="/question">Continue</Link></div>
         </div>
     </div>
     )
