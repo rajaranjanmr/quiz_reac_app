@@ -11,6 +11,13 @@ function quizReducer(state,{type,payload}){
             return {...state,subcategory:payload}
         case "SET_QUESTIONS":
             return {...state,questions:payload}
+        case "SET_INDEX":
+            return {...state,index:payload}
+        case "SET_SUBMIT":
+            return {...state,answer:[...state.answer, payload]}
+        case "CLEAR":
+            return {categories:[],category:"",subcategory:"",questions:[],index:0,answer:[],
+        }
         default:
             return state;
     }
@@ -18,7 +25,7 @@ function quizReducer(state,{type,payload}){
 }
 function QuizcontextProvider({children}){
     const [state,dispatch] = useReducer(quizReducer,{
-        categories:[],category:"",subcategory:"",questions:[],
+        categories:[],category:"",subcategory:"",questions:[],index:0,answer:[],
     })
     return(
     

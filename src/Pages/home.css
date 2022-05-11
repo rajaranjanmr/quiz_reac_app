@@ -2,11 +2,14 @@
 
 :root{
     --quiz-font-color:aliceblue;
-    --background-color-quiz-card:#612897;
+    --background-color-quiz-card:rgb(97, 40, 151);
     --background-color-base:#fbcfa2;
     --background-color-button:#44b927;
     --quiz-color-black:black;
     --quiz-background-color-rules:#082032;
+    --body-background-color:rgb(229, 242, 239);
+    --body-answer-to-show:rgb(124, 7, 124);;
+    --body-quiz-grey:grey;
 }
     *{
     padding:0;
@@ -17,7 +20,8 @@
     
 }
 body{
-    background-color: var(--background-color-base);
+    background-color: var(--body-background-color);
+    /* var(--background-color-base); */
     opacity: 0.9;
     
 }
@@ -34,10 +38,10 @@ body{
     padding-left:4rem;
     width:100%;
     padding-right: 4rem;
-    border:1px solid grey;
+    border:1px solid var(--body-quiz-grey);
     margin-bottom:3rem;
     display: block;
-    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+    background-image: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%);
     border-radius:15px;
     text-align: center;
     z-index: 1;
@@ -56,9 +60,9 @@ body{
     flex-direction: column;
     padding:1rem;
     width:50%;
-    min-height: 400px;
+    min-height: 22.2rem;
     border:1px solid black;
-    left:200px;
+    left:11.11rem;
     box-shadow:10px 10px 8px 10px var(--quiz-font-color);
     position:relative;
     left:40rem;
@@ -154,13 +158,14 @@ body{
 }
 .rules{
     background-color: var(--quiz-background-color-rules);
-    width:70%;
+    width: 70%;
     left: 50%;
+    top: 8rem;
     transform: translateX(-50%);
-    padding:1rem;
-    margin-top:10rem;
-    position: absolute;
-    z-index:1;
+    padding: 1rem;
+    margin-top: 0rem;
+    position: relative;
+    z-index: 1;
     
 }
 .rule-quiz h1{
@@ -172,10 +177,9 @@ body{
     padding-left:4rem;
     width:100%;
     padding-right: 4rem;
-    border:1px solid grey;
+    border:1px solid var(--body-quiz-grey);
     margin-bottom:3rem;
     display: block;
-    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     border-radius:15px;
     text-align: center;
     position: fixed;
@@ -204,6 +208,8 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
+    top: -54rem;
 }
 .back-rule a{
     text-decoration:none;
@@ -245,7 +251,7 @@ body{
     width: 100%;    
 }
 #answer-to-show{
-    background-color:rgb(124, 7, 124);
+    background-color:var(--body-answer-to-show);
     position:relative;
     top:40rem;
     color:black;
@@ -264,10 +270,9 @@ body{
     padding-left:4rem;
     width:100%;
     padding-right: 4rem;
-    border:1px solid grey;
+    border:1px solid var(--body-quiz-grey);
     margin-bottom:3rem;
     display: block;
-    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
     border-radius:15px;
     text-align: center;
     position: fixed;
@@ -290,12 +295,13 @@ h2{
   padding: 1rem;
   text-align: center;
   margin: 0;
-  color:black;
+  color:var(--quiz-color-black);
 }
 
 .question-container ul{
   list-style-type: none;
   padding: 0;
+  align-items: flex-start;
 }
 .question-contianer ul li{
   font-size: 1.2rem;
@@ -309,7 +315,7 @@ h2{
 }
 .question-container ul li label{
   cursor: pointer;
-  color:black;
+  color:var(--quiz-color-black);
 
 }
 .quiz-container button{
