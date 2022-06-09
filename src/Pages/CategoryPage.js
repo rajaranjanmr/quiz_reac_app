@@ -25,10 +25,7 @@ function CategoryPage(){
         getCategories()
     },[]);
     const filteredData = state.categories.filter(x=>x.name.includes(state.category))
-    console.log("filtered data",filteredData)
-    console.log("woww")
     const location = useLocation();
-    console.log(location.state,"its from")
     return(
         <>
         
